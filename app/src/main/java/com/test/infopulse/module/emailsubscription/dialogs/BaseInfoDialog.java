@@ -1,4 +1,4 @@
-package com.test.infopulse.dialogs;
+package com.test.infopulse.module.emailsubscription.dialogs;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

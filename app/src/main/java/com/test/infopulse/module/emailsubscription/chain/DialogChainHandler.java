@@ -1,34 +1,35 @@
-package com.test.infopulse.chain;
+package com.test.infopulse.module.emailsubscription.chain;
 
 import android.content.Context;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
+import android.content.Intent;
 
 import com.test.infopulse.Settings;
+import com.test.infopulse.module.emailsubscription.EmailSubscribeManager;
 
 public class DialogChainHandler extends ChainHandler {
 
     private int dialogOrderNumber;
     private Context ctx;
-    private FragmentManager fragmentManager;
-    private DialogFragment dialog;
 
-    public DialogChainHandler(int dialogOrderNumber, DialogFragment dialog, Context ctx,
-                              FragmentManager fragmentManager) {
+    public DialogChainHandler(int dialogOrderNumber, Context ctx) {
         this.dialogOrderNumber = dialogOrderNumber;
         this.ctx = ctx;
-        this.fragmentManager = fragmentManager;
-        this.dialog = dialog;
     }
 
     @Override
     public boolean show() {
         if (getCurrentDialogAttempt() == dialogOrderNumber) {
-            dialog.show(fragmentManager, getClass().getSimpleName());
+            ctx.sendBroadcast(createShowDialogIntent());
             return true;
         }
 
         return showNext();
+    }
+
+    private Intent createShowDialogIntent() {
+        Intent intent = new Intent(EmailSubscribeManager.ACTION_SHOW_DIALOG);
+        intent.putExtra(EmailSubscribeManager.EXTRAS_ORDER_NUM, dialogOrderNumber);
+        return intent;
     }
 
 

@@ -1,4 +1,4 @@
-package com.test.infopulse.dialogs;
+package com.test.infopulse.module.emailsubscription.dialogs;
 
 public class GetTheMostDialogFragment extends BaseDialog {
     @Override
