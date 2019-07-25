@@ -14,3 +14,12 @@ You coud find some gaps and things which work not perfect - it's ok :) this is s
 - repeat all previous step until tyou'll be satisfied
 
 If you'll need reset flow - clear the cache of current app :)
+
+
+# Version 2
+In version 2 was added MVVM arch pattern and refactoring
+Main part that was refactored:
+- email validation
+- creation of dialogs
+- displaing data on UI
+- other small stuff
