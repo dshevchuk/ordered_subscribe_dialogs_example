@@ -1,4 +1,4 @@
-package com.test.infopulse.chain;
+package com.test.infopulse.module.emailsubscription.chain;
 
 public abstract class ChainHandler {
 
