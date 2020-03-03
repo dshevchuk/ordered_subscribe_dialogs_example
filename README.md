@@ -1,4 +1,4 @@
-# ordered_subscribe_dialogs_example
+# The home task for one of the project in Infopulse, Ukraine/Kyiv
 Ordered subscribe dialogs example
 
 The main issue - how to display dialogs according specific condition, and easily modify(add/remove) dialogs in the future.
